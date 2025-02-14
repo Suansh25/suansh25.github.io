@@ -6,25 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
+        var total = 0;
         const products = [
             { id: 1, name: "P1", price: 34 },
             { id: 2, name: "P2", price: 50 },
             { id: 3, name: "P3", price: 40 },
         ];
+        
         const cart = {};
         const addToCart = (id) => {
             if(!cart[id]){
                 cart[id] = 1;
+               total +=1;
             }
+            else {
+                total =0;
+            }
+            // items.innerHTML = total;
+            
             showCart();
 
         };
+     
         const increment =(id) =>{
            cart[id] = cart[id] +1;
+           total += 1;
+
             showCart();
         }
         const decrement =(id) =>{
            cart[id] = cart[id] -1;
+           total -= 1;
            showCart();
         }
 
@@ -44,7 +56,8 @@
                 ${value.price * cart[value.id]
                         }-<button onclick='delete1(${value.id})''>Delete</button>
                         
-                </div>`;
+                </div>`; console.log(total);
+                items.innerHTML = total;
                 }
             });
             divCart.innerHTML = str;
@@ -61,6 +74,7 @@
 
 <body onload="showProducts()">
     <h1>My Store</h1>
+    <h4>Cart: <span id ="items"></span></h4>
     <hr />
     <h3>Products</h3>
     <div id="divProducts"></div>
