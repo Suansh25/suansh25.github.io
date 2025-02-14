@@ -16,9 +16,12 @@
         const cart = {};
         const addToCart = (id) => {
             total =0
+            my.innerHTML =" My Cart";
             if(!cart[id]){
                 cart[id] = 1;
+          
                total +=1;
+              
             }
            
             // items.innerHTML = total;
@@ -79,9 +82,9 @@
     <h1>My Store</h1>
     <h4>Cart: <span id ="items"></span></h4>
     <hr />
-    <h3>Products</h3>
+    <div id="my"><h3>Products</h3></div>
     <div id="divProducts"></div>
-    <h3>My Cart</h3>
+   
     <div id="divCart"></div>
     <h4></h4>
 </body>
