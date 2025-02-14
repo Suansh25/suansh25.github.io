@@ -15,13 +15,12 @@
         
         const cart = {};
         const addToCart = (id) => {
+            total =0
             if(!cart[id]){
                 cart[id] = 1;
                total +=1;
             }
-            else {
-                total =0;
-            }
+           
             // items.innerHTML = total;
             
             showCart();
@@ -44,7 +43,11 @@
             cart[id] = 0;
             showCart();
         }
+        const showTotal = () =>{
+           
+        }
         const showCart = () => {
+            let count = 1;
             let str = "";
             products.map((value) => {
                 if (cart[value.id]) {
@@ -80,6 +83,7 @@
     <div id="divProducts"></div>
     <h3>My Cart</h3>
     <div id="divCart"></div>
+    <h4></h4>
 </body>
 
 </html>

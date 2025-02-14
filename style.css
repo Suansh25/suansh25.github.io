@@ -1,4 +1,4 @@
-.container {
+/* .container {
     position: fixed;
     overflow: auto;
     top: 0;
@@ -58,6 +58,84 @@
     background-color: teal;
     padding: 10px;
     color: white;
+    border: none;
+    border-radius: 10%;
+  } */
+   /* color schemes:#6A89A7,#BDDDFC,#88BDF2,#384959 */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+body{
+  background-color:#BDDDFC;
+  font-family: "Baloo Bhai 2", serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.home{
+  padding-top: 0px;
+}
+.container {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  .header-row {
+    background-color:#6A89A7 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+  }
+
+  .header-row .box {
+    padding: 10px;
+  }
+
+  .header-row li {
+    display: inline;
+    padding: 5px;
+    font-size: larger;
+  }
+
+  .header-row a {
+    text-decoration: none;
+  }
+
+  .header-row a:hover {
+    text-decoration: underline;
+  }
+
+  .row {
+    padding: 100px;
+    height: 65%;
+  }
+
+  .row .box {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .footer {
+    padding: 20px;
+    margin: 0px;
+    background-color: #6A89A7;
+    color: #BDDDFC;
+    font-size: large;
+  }
+
+  button {
+    background-color: #384959;
+    padding: 10px;
+    color: #88BDF2;
     border: none;
     border-radius: 10%;
   }
